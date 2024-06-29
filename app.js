@@ -1,11 +1,11 @@
 let board = ["", "", "", "", "", "", "", "", ""];
 
-let currentPlayer = "x";
+let currentPlayer = "X";
 
 let isGameActive = true;
 
 const squares = document.querySelectorAll(".square");
-const restartButton = document.getElementById(".restartButton");
+const restartButton = document.getElementById("restartButton");
 
 const winningConditions = [
   [0, 1, 2],
@@ -59,7 +59,7 @@ const handleSquareClick = (e) => {
   board[clickedSquareIndex] = currentPlayer;
   clickedSquare.textContent = currentPlayer;
 
-  handleResultValidation();
+  handleValidation();
   currentPlayer = currentPlayer === "X" ? "O" : "X";
 };
 
